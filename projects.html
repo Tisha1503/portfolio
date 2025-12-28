@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Tisha Thakkar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Technical Projects</h2>
+        
+        <div class="top-github-link">
+            <a href="https://github.com/Tisha1503" target="_blank">
+                <i class="fab fa-github"></i> github.com/Tisha1503
+            </a>
+        </div>
+         <div class="card">
+            <h3>
+                Multi-Modal Fashion Discovery Engine
+                <br>
+                <a href="https://github.com/Tisha1503/HM-Fashion-Recommender" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </h3>
+            <ul>
+                <li>Developed an end-to-end hybrid recommendation system for the <strong>H&M Personalized Fashion dataset</strong>, processing over 31 million transactions.</li>
+                <li>Engineered a high-performance data pipeline using <strong>Polars and Parquet</strong>, reducing memory overhead by 70% and accelerating ETL speed by 10x compared to standard Pandas workflows.</li>
+                <li>Implemented a <strong>Deep Learning feature extraction pipeline</strong> using a pre-trained <strong>ResNet50 (CNN)</strong> in PyTorch to generate 2048-dimensional embeddings from product images.</li>
+                <li>Developed a multi-stage retrieval strategy combining <strong>Collaborative Filtering</strong> (user history), <strong>Semantic Matching</strong> (metadata), and <strong>Visual Similarity</strong> (Computer Vision).</li>
+                <li>Achieved a <strong>3x improvement in MAP@12</strong> (Mean Average Precision) over the global popularity baseline through rigorous temporal validation and hybrid model tuning.</li>
+                <li>Built and deployed an interactive <strong>Streamlit dashboard</strong> allowing users to perform real-time visual discovery and navigate recommendations through an intuitive web interface.</li>
+                <li>Optimized system performance for local execution on consumer hardware by implementing <strong>resource caching</strong> and vectorized similarity calculations.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>
+                Biomechanical Injury Detection
+                <br>
+                <a href="https://github.gatech.edu/pages/nmitte30/project-proposal-group20/" target="_blank">
+                    View Project Website
+                </a>
+            </h3>
+            <ul>
+                <li>Designed an end-to-end machine learning pipeline to analyze human movement and predict biomechanical stress from short exercise videos.</li>
+                <li>Used <strong>YOLOv8-based pose estimation</strong> to extract joint keypoints frame-by-frame, converting raw video into structured motion data.</li>
+                <li>Engineered biomechanical features including joint angles, angular velocities, motion vectors, and kinematic stress indicators.</li>
+                <li>Trained and evaluated <strong>Random Forest regression</strong>, <strong>K-Means clustering</strong>, and a <strong>deep neural network</strong> for stress prediction.</li>
+                <li>Improved dataset quality through preprocessing and scaling, increasing usable samples by nearly an order of magnitude.</li>
+                <li>Achieved significantly lower RMSE with the neural network compared to baseline models.</li>
+                <li>Validated predictions by correlating high stress scores with physically demanding movements.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>News Sentiment Analysis</h3>
+            <ul>
+                <li>Built an end-to-end <strong>Python-based NLP pipeline</strong> to analyze real-time financial news sentiment for publicly traded companies.</li>
+                <li>Integrated <strong>NewsAPI</strong> for automated ingestion of time-filtered news articles.</li>
+                <li>Applied <strong>FinBERT</strong>, a transformer model fine-tuned for financial text, to classify sentiment polarity.</li>
+                <li>Implemented preprocessing steps including text cleaning, tokenization, and validation checks.</li>
+                <li>Designed error-handling and scheduling logic to support continuous, real-time sentiment analysis.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>PC Part Picker Web Crawler</h3>
+            <ul>
+                <li>Designed and implemented a <strong>multithreaded Java web crawler</strong> to recommend optimal CPU and GPU combinations for gaming workloads.</li>
+                <li>Scraped and parsed product data from <strong>Amazon, Walmart, and Micro Center</strong> using the <strong>Jsoup</strong> library.</li>
+                <li>Implemented parallel crawling with Java threads to significantly reduce scraping latency.</li>
+                <li>Stored cleaned product data (name, price, link) in shared <strong>HashMaps</strong> for fast lookup.</li>
+                <li>Developed price comparison logic to identify the <strong>cheapest compatible hardware configuration</strong> for a selected game.</li>
+                <li>Handled dynamic URLs, duplicate prevention, and crawl-depth limits to ensure stability.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>GT Movie Store</h3>
+            <ul>
+                <li>Developed a full-stack web application using <strong>Django</strong> for backend logic and <strong>HTML/CSS</strong> for frontend design.</li>
+                <li>Implemented core features including movie search, detailed listings, and purchase workflows.</li>
+                <li>Designed database models and queries using <strong>Django’s ORM</strong> for efficient and secure data handling.</li>
+                <li>Built dynamic views and templates to deliver a responsive, user-friendly shopping experience.</li>
+                <li>Structured the application using MVC principles to support maintainability and scalability.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Virtual Therapist</h3>
+            <ul>
+                <li>Developed an AI-powered virtual therapist to provide <strong>on-demand mental health support</strong> using conversational AI.</li>
+                <li>Integrated the <strong>OpenAI ChatGPT API</strong> to generate empathetic, context-aware responses.</li>
+                <li>Curated and stored mental health and wellness information to enrich prompt context.</li>
+                <li>Injected domain knowledge into prompts to improve personalization and response relevance.</li>
+                <li>Evaluated system effectiveness in supporting stress and anxiety-related use cases.</li>
+                <li>Presented the project as a research poster at <strong>GSURC</strong>, emphasizing AI-driven social impact.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Tisha Thakkar
+    </div>
+    <script src="script.js"></script>
+
+
+</body>
+</html>

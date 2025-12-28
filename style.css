@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0f1113;           
+    --surface: #1a1d21;      
+    --primary: #e5b3bb;      
+    --primary-muted: rgba(229, 179, 187, 0.1);
+    --text-main: #f1f2f4;    
+    --text-muted: #e2e6eb;   
+    --border: rgba(255, 255, 255, 0.06);
+    --nav-bg: rgba(15, 17, 19, 0.95);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+nav {
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary);
+}
+
+header {
+    padding: 12rem 2rem 8rem;
+    text-align: center;
+    background: radial-gradient(circle at top, #2d1f21 0%, var(--bg) 80%);
+}
+
+header h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+header p {
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    font-size: 1.4rem;
+    margin: 0 1rem;
+    color: var(--text-muted);
+}
+
+.social-links a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 2rem 6rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 4rem 0 3rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: "";
+    width: 35px;
+    height: 3px;
+    background: var(--primary);
+    margin-right: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background: var(--border);
+    margin-left: 1.5rem;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    box-shadow: inset 0 0 20px rgba(229, 179, 187, 0.05);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.card p strong {
+    color: var(--primary); 
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.card ul {
+    margin-top: 1.5rem;
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+    list-style-type: none;
+}
+
+.card li {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.card li::before {
+    content: "→";
+    position: absolute;
+    left: -1.5rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.tech-group strong {
+    display: block;
+    color: var(--primary);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.tech-tag {
+    display: inline-block;
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    margin: 0 0.6rem 0.6rem 0;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.tech-tag:hover {
+    border-color: var(--primary);
+    background: var(--primary-muted);
+    color: var(--primary);
+}
+
+/* --- Contact & Project Links --- */
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: 0.4s ease;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-right: 2rem;
+    width: 40px;
+    text-align: center;
+}
+
+.contact-item a {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contact-item:hover {
+    border-color: var(--primary);
+    transform: translateX(10px);
+    background: var(--primary-muted);
+}
+
+.top-github-link a {
+    color: var(--primary);
+    border: 1px solid var(--border);
+    padding: 12px 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.top-github-link a:hover {
+    border-color: var(--primary);
+    background: var(--primary-muted);
+}
+
+.footer {
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+}
+/* --- Global Link & Hover Logic --- */
+
+/* Resets all links to inherit text color and removes blue default */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+/* Global hover state for all links */
+a:hover {
+    color: var(--primary) !important; /* Turns Rose-Pink on hover */
+}
+
+/* Specific styling for project/external links to make them stand out */
+.card a {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+    padding: 5px 0;
+    border-bottom: 1px solid transparent;
+}
+
+/* Special hover effect for "View Project Website" or GitHub links */
+.card a:hover {
+    color: var(--primary) !important;
+    border-bottom: 1px solid var(--primary); /* Adds a pink underline only on hover */
+    transform: translateX(5px); /* Subtle slide to the right */
+}
